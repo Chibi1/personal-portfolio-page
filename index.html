@@ -4,26 +4,30 @@
 
 <style>
     * {
+        margin: 0px;
+        padding: 0px;
+        /* text-align: center; */
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
+
     body {
         margin: 0px;
         padding: 0px;
         width: 100%;
         height: 100%;
-        background-color: aquamarine;
+        background-color: #E8EBE4;
     }
 
     .header-container {
         position: fixed;
-        grid-template-columns: 1fr;
+        /* grid-template-columns: 1fr; */
         /* display: none; */
         top: 0px;
         height: 70px;
         width: inherit;
         margin: 0px;
-        background-color: gray;
-        z-index: 1;        
+        background-color: #E8EBE4;
+        z-index: 2;        
     }
 
         .header-container ul {
@@ -31,27 +35,30 @@
             list-style-position: outside;
             list-style-type: none;
             margin: 0px;
+            /* background-color: aquamarine; */
         }
 
         .header-container ul li {
             display: inline-block;
             margin: 0px;
             /* padding: 10px 60px; */
+            /* background-color: aquamarine; */
         }
 
         .header-container ul li a {
             display: inline-block;
-            margin: 0px;
-            padding: 22px 60px;
+            /* margin-bottom: 0px; */
+            margin: 18px 60px;
             font-size: 1.2em;
             text-decoration: none;
+            color: black;
             /* background-color: aquamarine; */
         }
 
     .grid-container {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 70px 600px auto auto 70px;
+        grid-template-rows: 70px 600px auto 600px 70px;
         grid-template-areas:
             'header' 
             'welcome'
@@ -62,7 +69,7 @@
         /* height: 1000px; */
         margin: 0px;
         padding: 0px;
-        background-color: aqua;
+        /* background-color: rgb(AE, F3, E7); */
     }
 
     .item2 {
@@ -71,7 +78,7 @@
         /* line-height: 100vw; */
         text-align: center;
         /* padding: 80vw auto; */
-        background-color: lightblue;
+        background-color: #E8EBE4;
     }
 
         .item2 h2 {
@@ -89,29 +96,82 @@
     .item3 {
         grid-area: projects;
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 10% 40% 40% 10%;
         grid-template-rows: auto;
         grid-template-areas:
-            'header header'
-            'left right';
+            '. header header .'
+            '. left right .';
+            grid-gap: 0px;
         text-align: center;
+        background-color: white;    
+        /* grid-gap: 0px; */
+        /* justify-self:center; */
         /* border-style: solid;
         border-width: 1px; */
     }
 
         .item3-header {
             grid-area: header;
-            font-size: 1.5em;
+            margin: 20px 0px 0px;
+            font-size: 2.5em;
+            /* background-color: aqua; */
         }
 
         .item3-left {
             grid-area: left;
+            justify-self: center;
         }
 
         .item3-right {
             grid-area: right;
+            justify-self: center;
+            /* background-color: aqua; */
         }
 
+        .item3-left, .item3-right, {
+            padding: 25px 0px;
+            /* color: black;
+            text-decoration: none; */
+            /* list-style-type: none; */
+        }
+
+        .item3-left, .item3-right, img {
+            width: 400px;
+            height: auto;
+            margin: 25px 0px 0px 0px;
+            /* border-style: solid; */
+            /* border-width: 3px; */
+            /* border-color: #798071; */
+            /* z-index: 2; */
+        }
+
+        .item3-left, .item3-right, a {
+            text-decoration: none;
+        }
+
+        .picture {
+            border-style: solid;
+            border-width: 3px;
+            border-color: #798071;
+        }
+
+        .caption {
+            width: 400px;
+            margin-top: -10px;
+            margin-bottom: 50px;
+            padding: 10px 0px;
+            font-size: 1.2em;
+            /* font-weight: bold; */
+            /* text-decoration: none; */
+            color: black;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #798071;
+        }
+
+        .caption:hover {
+            background-color: #E8EBE4;
+        }
 
     .item4 {
         grid-area: collaboration;
@@ -123,15 +183,17 @@
             'contact1 contact2 contact3';
         /* justify-self: center; */
         /* justify-items: center; */
-        justify-content:center;
+        justify-content: center;
         text-align: center;
         font-size: 1.5em;
-        background-color: lightgoldenrodyellow;
+        background-color: #999AC6;
     }
 
         .item4-header {
             grid-area: header;
-            background-color: black;
+            margin-top: 5%;
+            font-size: 2em;
+            /* background-color: black; */
         }
 
         .item4-contact1 {
@@ -147,12 +209,33 @@
             grid-area: contact3;
         }
 
+        .contact {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            /* margin-top: 10px; */
+            /* padding: 70px; */
+            /* padding-top: 70px; */
+            line-height: 150px;
+            /* vertical-align: middle; */
+            /* border-style: solid; */
+            border-radius: 50%;
+            /* border-width: 1px;
+            border-color: blueviolet; */
+            color: black;
+            background-color: #E8EBE4;
+        }
+
+        .contact:hover {
+            background-color: #D2D5DD;
+        }
+
     .item5 {
         grid-area: footer;
         text-align: center;
-        background-color: pink;
         margin: 0px;
         padding: 0;
+        background-color: #E8EBE4;
     }
 
         .item5 ul {
@@ -170,15 +253,17 @@
             text-decoration: none;
             display: inline-block;
             /* margin: 0px; */
-            padding: 10px 50px;
+            margin: 40px 50px;
             font-size: 1em;
+            color: black;
+            /* background-color: blue; */
         }
 
         .item5 #copyright {
             display: inline-block;
             /* height: 20px; */
             /* margin: 16px; */
-            padding: 25px;
+            padding: 40px;
             /* text-align: center; */
         }
 
@@ -201,7 +286,7 @@
 
         <div class="item2" id="welcome">
             <h2>Hi, I'm Chibi.</h2>
-            <p>I am a developer</p>
+            <p>I am a developer.</p>
         </div>
 
         <div class="item3" id="projects">
@@ -210,11 +295,17 @@
             </div>
 
             <div class="item3-left">
-                <p>meme</p>
+                <div><a href="https://codepen.io/chibi1/pen/jexrRW" target="_blank"><img class="picture" src="./images/css-technical-documentation.png" alt="css-technical-documentation-project"></a></div>
+                <a href="https://codepen.io/chibi1/pen/jexrRW" target="_blank"><div class="caption">CSS Box Model Technical Documentation</div></a>
+                <div><a href="https://codepen.io/chibi1/pen/dgZrQb" target="_blank"><img class="picture" src="./images/survey-form.png" alt="travel-survey-project"></a></div>
+                <a href="https://codepen.io/chibi1/pen/dgZrQb" target="_blank"><div class="caption">Travel Survey</div></a>
             </div>
 
             <div class="item3-right">
-                <p>noongie</p>
+                <div><a href="https://codepen.io/chibi1/pen/XxZKxE" target="_blank"><img class="picture" src="./images/product-landing-page.png" alt="product-landing-page-project"></a></div>
+                <a href="https://codepen.io/chibi1/pen/XxZKxE" target="_blank"><div class="caption">Product Landing Page</div></a>
+                <div><a href="https://codepen.io/chibi1/pen/aRVNPY" target="_blank"><img class="picture" src="./images/tribute-page.png" alt="tribute-page-project"></a></div>
+                <a href="https://codepen.io/chibi1/pen/aRVNPY" target="_blank"><div class="caption">Tribute Page</div></a>
             </div>
         </div>
 
@@ -224,15 +315,15 @@
             </div>
 
             <div class="item4-contact1">
-                l
+                <a href="https://github.com/Chibi1" target="_blank"><div class="contact">GitHub</div></a>
             </div>
 
             <div class="item4-contact2">
-                f`
+                <a href="mailto:chibueze.e.njoku@gmail.com" target="_blank"><div class="contact">Send a mail</div></a>
             </div>
 
             <div class="item4-contact3">
-                g
+                <a href="tel:+61-470-207-708"><div class="contact">Call me</div></a>
             </div>
         </div>
 
@@ -243,7 +334,7 @@
                 <li><a href="#projects">Work</a></li>
                 <li><a href="#collaboration">Contact</a></li>
             </ul>
-            <span id="copyright">© Created by Chibi Njoku</span>
+            <span id="copyright">&#169 Created by Chibi Njoku</span>
         </div>
 
     </div>
